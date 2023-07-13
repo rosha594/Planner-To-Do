@@ -1,0 +1,12 @@
+.missedTask>div>div>h2{
+    color:purple;
+    margin-left:2rem;
+}
+
+.missedTask>div>div>h4{
+    color:purple;
+    font-size: 2rem;
+    width: 50rem;
+    text-align: center;
+    margin: 5rem auto 0px auto;
+}

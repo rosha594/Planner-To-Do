@@ -1,0 +1,43 @@
+ToDo list with advanced Features:::::::::
+
+1. Add Task with Due Dates with time to be done at.
+        - if due date is gone then it will goes on missed task list.
+        - if done it will goes to completed tasks.
+        - task can be delete, update.
+
+
+2. Add Reocring Task - occurs on daily basis
+3. Set Priority Levels.
+4. Add Tags.
+5.Notes/Description/Summary
+
+
+
+
+Task types :
+
+* Normal Task 
+    - Task Heading
+    - Task Description (Optional)
+    - Task Instruction (Optional)
+    - Due Date
+    - Tags (Optinal)
+    - Priority Level
+    - Status Bar if (it is 100% then it will goes to completed list)
+    - Delete and Update Button
+
+* Today's Task 
+    - Task Heading
+    - Task Description (Optional)
+    - Task Instruction (Optional)
+    - Tags (Optinal)
+    - Priority Level
+    - Status Bar if (it is 100% then it will goes to completed list)
+
+
+Pages :
+
+1. Main Page
+    - Left-Side Bar having features (Dashboard, Regular Task, Completed Task, Missed Task, Tags, Calender, Log out)
+    
+    - Right-Side Bar having (User Profile,Overall Progress, Upcoming Event List) or Log in button

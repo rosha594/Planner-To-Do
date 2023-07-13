@@ -1,0 +1,20 @@
+.LeftSideBar{
+    padding: 1rem;
+    position: relative;
+    
+}
+
+.logo h1{
+    width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+    margin: 0px auto 0px auto;
+    color: purple;
+    font-size: 1rem;
+    
+}
+.logo img{
+    width: 50px;    
+    
+}

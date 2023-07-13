@@ -1,0 +1,62 @@
+.sideMenu{
+   position: relative;
+    margin-top: 1rem;
+}
+
+.sideMenu .menu{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 1rem;
+    padding: .8rem;
+    font-size: .8rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+}
+.sideMenu .menu span{
+    margin-left: .6rem;
+}
+.sideMenu .menu:hover{
+    width: 100%;
+    cursor: pointer;    
+    color: white;
+    background-color: purple;
+    font-weight: 600;
+    border-radius: .5rem;
+}
+
+
+.count{
+    position: absolute;
+    right: -15px;
+    top: 7px;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50px;
+    text-align: center;
+    align-items: center;
+    line-height: 2;
+}
+
+.regular{
+    background-color: rgb(7, 128, 168);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+.completed{
+    background-color: rgb(7, 126, 27);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+.missed{
+    background-color: rgb(207, 28, 28);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+.tag{
+    background-color: rgb(194, 181, 191);
+    color: rgb(17, 16, 16);
+    font-weight: 600;
+}

@@ -1,0 +1,29 @@
+
+
+
+.tagBox{
+    display: flex;
+    flex-wrap: wrap;
+    height: 2rem;
+    padding: 2rem;
+    margin-top: -3.5rem;
+    gap: .8rem;    
+    overflow-x: scroll;
+}
+.tagBox::-webkit-scrollbar{
+    display: none;
+}
+
+.tags{
+    width: fit-content;
+    padding: .8rem;
+    font-size: 1rem;
+    background-color: purple;
+    color: white;
+    border-radius: 15px;
+}
+.tags:hover{
+    cursor: pointer;
+    background-color: purple;
+    
+}
