@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Upcoming from "@mui/icons-material/FileUploadRounded";
 import { Slider } from "@mantine/core";
+import { AuthContext } from "../../context/AutheContext";
 
-function UpdateTask({ userStatus }) {
+function UpdateTask() {
+
+  const {currentUser} = useContext(AuthContext)
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [instruction, setInstruction] = useState("");
@@ -67,7 +70,7 @@ function UpdateTask({ userStatus }) {
           </span>
           <span>
             <label htmlFor="task-dueDate">Set Due Date (optional)</label>
-            {userStatus ? (
+            {currentUser ? (
               <input
                 type="date"
                 onChange={(e) => setDueDate(e.target.value)}

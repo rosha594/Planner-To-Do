@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import TaskList from '../../components/TaskList/TaskList'
 import './CompletedTask.css'
+import { AuthContext } from '../../context/AutheContext'
 
 function CompletedTask() {
-  const [userStatus, setStatus] = useState(true);
+  const {currentUser} = useContext(AuthContext)
   const [todos, setTodos] = useState([
     {
       heading: "Task2bhthytjjuykuiilo;po;po'p'",
@@ -111,7 +112,7 @@ function CompletedTask() {
   ])
   return (
     <div className='completedTask'>
-      {userStatus?<div>
+      {currentUser?<div>
         {todos.length===0?<div><h4>There is no Completed Task... Complete one !</h4></div>:
           <TaskList task={"Completed Tasks"} todos={todos} format={"tasks"} />
         }

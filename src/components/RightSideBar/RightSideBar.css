@@ -1,41 +1,26 @@
-.noUserBlock{
-    /* background-colo r: blueviolet; */
-    width:100%;
-    height:100vh;
+.rightBlock{
     position: relative;
 }
 
-.noUserBlock button{
-    width: 40%;
-    padding: .5rem;
-    border:none;
-    border-radius: 10px;
-    background-color: rgb(128, 13, 182);
-    color:white;
-    font-size: 1.3rem;
-    font-weight: 600;
+
+.btn-login{
     position: absolute;
-    top:1.8rem;
-    right:2.3rem;
+    left: 30%;
+    top:1.9rem;
+    padding: .7rem 2rem;
+    background-color: white;
+    color:purple;
+    border: 2px solid purple;
+    border-radius: .6rem;
+    font-size: 1rem;
+    font-weight: 600;
+    
 }
-
-.noUserBlock button:hover{
+.btn-login:hover{
     cursor: pointer;
-    background-color: rgb(90, 4, 129);
-}
-
-.noUserBlock .progress{
-width: 70%;
-background-color: rgba(255,255,255,.7);
-border-radius: 15px;
-padding: 1rem;
-}
-
-.noUserBlock .upcoming{
-width: 70%;
-height: 10rem;
-background-color: rgba(255,255,255,.6);
-border-radius: 15px;
-padding: 1rem;
-margin-top:2rem;
+    background-color: purple;
+    color:white;
+    border: 1px solid wihte;
+    box-shadow: rgba(0,0,0,.2) 0px 3px 8px;
+    
 }
