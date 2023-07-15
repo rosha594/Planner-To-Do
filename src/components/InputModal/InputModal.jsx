@@ -42,8 +42,8 @@ function InputModal({ modalOpened, setModalStatus, userStatus,inputFormat }) {
         
        
         {inputFormat==="Update Task"&&<UpdateTask userStatus={userStatus}/>}
-        {inputFormat==="Add New Task"&&<AddTask setModalStatus={setModalStatus}/>}
-        {inputFormat==="Log In"&&<AuthPage setModalStatus={setModalStatus}/>}
+        {inputFormat==="Add New Task"&&<AddTask userStatus={userStatus}/>}
+        {inputFormat==="Log In"&&<AuthPage/>}
         
         
 

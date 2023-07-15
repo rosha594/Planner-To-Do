@@ -10,7 +10,7 @@ body{
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 12rem auto 15rem;
+    grid-template-columns: 12rem auto 14rem;
     gap:1rem;
     margin: 0;
     padding: 0;

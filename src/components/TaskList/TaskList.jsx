@@ -4,8 +4,6 @@ import InputModal from "../../components/InputModal/InputModal";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-
-
 function TaskList({ task,todos, format }) {
   
   const [modalOpened, setModalStatus] = useState(false);
@@ -22,8 +20,6 @@ function TaskList({ task,todos, format }) {
     else if (status <= 90 && status > 70) return `${format} progress-bar p-90`;
     else if (status <= 100 && status > 90) return `${format} progress-bar p-100`;
   };
-
-
   return (
     <>
     <div style={{ width: "100%", height: "100%" }} >
@@ -32,9 +28,7 @@ function TaskList({ task,todos, format }) {
           <h2 style={{ float:"left"}}>{task}</h2>
           <div className="taskList">
             {todos.map((todo) => (
-             
-                
-                <div className={setClass(todo.priority)} style={{height:task==="Completed Tasks"?"8rem":""}}>
+              <div className={setClass(todo.priority)} style={{height:task==="Completed Tasks"?"8rem":""}}>
                 <span>{todo.heading}</span>
                 <span>{todo.description}</span>
                 {todo.tag===""?<span>No Tags</span>:<span>{todo.tag}</span>}
@@ -59,7 +53,6 @@ function TaskList({ task,todos, format }) {
                 </span>
                 :""}
               </div>
-              
             ))}
           </div>
         </>
@@ -75,10 +68,7 @@ function TaskList({ task,todos, format }) {
             setModalStatus={setModalStatus}
             inputFormat={"Update Task"}
           />}
-    
-    
-    
-    </>
+          </>
   );
 }
 

@@ -1,37 +1,19 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import TaskIcon from "@mui/icons-material/TaskAltOutlined";
-import { AuthContext } from '../../context/AutheContext';
-import { addDoc, collection, doc, serverTimestamp, setDoc } from 'firebase/firestore';
-import { db } from '../../firebase-config';
 
-function AddTask({setModalStatus}) {
-    const {currentUser} = useContext(AuthContext)
+function AddTask({userStatus}) {
 
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [instruction, setInstruction] = useState("");
     const [dueDate, setDueDate] = useState(null);
     const [tags, setTags] = useState("");
-    const [priority, setPriority] = useState(null);
-    const [regular,setRegular] = useState(false);
+    const [priority, setPriority] = useState("");
+    const [status, setStatus] = useState("");
 
 
-    const addTask = async (e)=> {
+    const addTask = (e)=> {
         e.preventDefault();
-        const res = await addDoc(collection(db, "tasks"), {
-          title,
-          description,
-          instruction,
-          dueDate,
-          tags,
-          priority,
-          regular,
-          timestamp:serverTimestamp(),
-          userId:currentUser.user.uid
-        });
-        
-        setModalStatus(false);
-        alert("Task Added !")
         }
 
   return (
@@ -43,7 +25,6 @@ function AddTask({setModalStatus}) {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Add Title Here"
-            required
           />
           <label htmlFor="task-description">Task Description (optional)</label>
           <input
@@ -68,16 +49,18 @@ function AddTask({setModalStatus}) {
           />
           <label htmlFor="task-priority">Set Priority Level (optional)</label>
           <span>
-            <input name="task-priority" type="radio"   onChange={()=> setPriority("High")}/>
+            <input name="task-priority" type="radio" />
+            Normal
+            <input name="task-priority" type="radio" />
             High
-            <input name="task-priority" type="radio"   onChange={()=> setPriority("Average")}/>
+            <input name="task-priority" type="radio" />
             Average
-            <input name="task-priority" type="radio"   onChange={()=> setPriority("Low")}/>
+            <input name="task-priority" type="radio" />
             Low
           </span>
           <span>
           <label htmlFor="task-dueDate">Set Due Date (optional)</label>
-          {currentUser ? (
+          {userStatus ? (
             <input
               type="date"
               onChange={(e) => setDueDate(e.target.value)}
@@ -91,10 +74,10 @@ function AddTask({setModalStatus}) {
           </span>
 
           <span>
-          <label htmlFor="regulat-task">Set as Regular Task (optional)</label>
+          <label htmlFor="regulat-task">Set Priority Level (optional)</label>
           
-          <input name="regular-task" type="checkbox" style={{marginLeft:"2rem"}} onChange={()=>setRegular(true)}/>
-            
+            <input name="regular-task" type="checkbox" style={{marginLeft:"2rem"}}/>
+            Regular Task
           </span>
 
           <button type="submit" className="btn-success"><TaskIcon /><span>Add Task</span></button>

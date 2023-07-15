@@ -1,9 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./RegularTask.css";
 import TaskList from "../../components/TaskList/TaskList";
-import { AuthContext } from "../../context/AutheContext";
 function RegularTask() {
-  const {currentUser} = useContext(AuthContext);
+  const [userStatus, setStatus] = useState(true);
   const [todos, setTodos] = useState([
     {
       heading: "Task2bhthytjjuykuiilo;po;po'p'",
@@ -111,7 +110,7 @@ function RegularTask() {
   ]);
   return (
     <div className="regularTask">
-      {currentUser ? (
+      {userStatus ? (
         <div>
           {todos.length===0?<div><h4>There is no Regular Task... Add one !</h4></div>:
           <TaskList task={"Regular Task"} todos={todos} format={"tasks"} />

@@ -1,10 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./Tags.css";
 import TaskList from "../../components/TaskList/TaskList";
-import { AuthContext } from "../../context/AutheContext";
 
 function Tags() {
-  const {currentUser} = useContext(AuthContext)
+  const [userStatus, setStatus] = useState(true);
   const [tags, setTags] = useState(["Computer","Computer","Computer","Computer","Computer","Computer","Computer","Computer","Computer","Computer","Computer","Computer","College","Computer","College","Computer","College","Computer","College","Computer","College"]);
   const [listshow, setList] = useState(false);
 
@@ -156,7 +155,7 @@ function Tags() {
   };
   return (
     <div>
-      {currentUser ? (
+      {userStatus ? (
         <div className="tagList">
           {tags.length===0?tags[0]="No Tags !":tags[0]=""}
           <div className="tagBox">

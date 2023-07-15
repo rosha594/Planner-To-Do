@@ -15,32 +15,46 @@
 }
 
 .logInBlock{
- display: block;
- position: absolute;
- left: 20%;
- right: 20%;
+    padding: 2rem;
+    position: absolute;
+    top:.2rem;
+    left:20%;
+    right:20%;
+    background-color: blue;
 }
 .hideLogin{
-    display: none;
+    padding: 2rem;
+    position: absolute;
+    top:.2rem;
+    /* left:20%; */
+    right:50rem;
+    background-color: blue;
 }
 .hideSignUp{
-  display: none;
-       
+    padding: 2rem;
+    position: absolute;
+    top:.2rem;
+    left:500px;
+    height: 10rem;
+    background-color: blue;
+    transition: 2s;    
 }
 
 .showSignUp{
-    display: block;
- position: absolute;
- left: 20%;
- right: 20%;
- background-color: blue; 
+    position: absolute;
+    height: 10rem;
+    background-color: blue;
+    /* top:.2rem; */
+    left:10%;
+    right:10%;
+    transition: 2s; 
 }
 
 
 .modelSignUp{
     display:grid;
     grid-template-columns: auto auto;
-    /* background-color: rgb(48, 48, 97); */
+    background-color: rgb(48, 48, 97);
     gap:1rem;
 }
 
