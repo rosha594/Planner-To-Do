@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import TaskList from '../../components/TaskList/TaskList'
 import './MissedTask.css'
+import { AuthContext } from '../../context/AutheContext';
 
 
 function MissedTask() {
-  const [userStatus, setStatus] = useState(true);
+  const {currentUser} = useContext(AuthContext)
   const [todos, setTodos] = useState([
     {
       heading: "Task2bhthytjjuykuiilo;po;po'p'",
@@ -112,7 +113,7 @@ function MissedTask() {
   ]);
   return (
     <div className='missedTask'>
-      {userStatus?<div>
+      {currentUser?<div>
         {todos.length===0?<div><h4>There is no Missed Task... Your are on Progress...!</h4></div>:
           <TaskList task={"Missed Tasks"} todos={todos} format={"tasks"} />
         }

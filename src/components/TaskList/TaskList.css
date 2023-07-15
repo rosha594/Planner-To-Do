@@ -1,13 +1,13 @@
 .taskList{
     display: flex;
     flex-wrap: wrap;
-    gap: .8rem;
+    gap: .5rem;
     width: inherit;
-    height: 21rem;
+    height: 22rem;
     overflow-y: scroll;
     overflow-x: hidden;
     justify-content: center;
-    /* margin-top: 3rem; */
+    
     
     padding: .5rem;  
     
@@ -23,6 +23,7 @@
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
+    border: 1px solid purple;
     display: flex;
     gap: .6rem;
     flex-direction: column;
@@ -116,32 +117,33 @@
     width:50rem;
     height: 2.5rem;
     padding: .5rem;
+    border:1px solid rgb(197, 197, 197);
     border-radius:10px;
     background-color: rgba(255, 255, 255, 0.5);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5px auto 0px auto;
+    margin: 0px auto 0px auto;
 }
 
 
 .list span:nth-child(2){
     font-size: 1rem;
     text-align: justify;
-    width: 25%;
+    width: 10%;
     display:inline-block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    /* background-color: #0e7c00;border-radius: 20px; */
+  
 }
 .list span:nth-child(1){
     display: inline-block;  
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;  
-    width: 20%;
-    font-size:1.5rem;
+    width: 10%;
+    font-size:1.1rem;
     font-weight: 800;
     text-align: left;
     padding: 0.5rem;
@@ -161,7 +163,10 @@
     font-size: 1rem;
     text-align: left;
     font-weight: 600;
-    width: 17%;
+    width: fit-content;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 15px;
 }
 
 .list .progress-bar__container {
@@ -206,13 +211,14 @@
 
 
 /* priority Levels */
-.low{
+.low span:nth-child(4){
     background-color: rgba(245, 213, 34, 0.5);  
+   
 }
-.average{
+.average span:nth-child(4){
     background-color: rgba(255, 94, 1, 0.527);  
 }
-.high{
+.high span:nth-child(4){
     background-color: rgba(255, 8, 0, 0.5);  
 }
 
